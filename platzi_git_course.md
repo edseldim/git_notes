@@ -41,6 +41,8 @@ To have more information about the changes done, one can output various things.
 
 ``git log`` shows the commit history for the branch we are in. To make this a little bit more summarized, one can use ``git log --oneline``.
 
+``git log`` shows where the current ``HEAD`` of the different branches (or the last commit where they are) is. This is important to check the differences between the different branches.
+
 Another tool git provides is ``git diff <commit A hash> <commit B hash>`` which helps compare two commits to see what differs.
 
 Also, ``git show <filename>`` shows the latest changes made to a file.
