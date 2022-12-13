@@ -71,5 +71,14 @@ To list all branches in the project, ``git branch`` will do the job.
 
 ## Remote repositories
 
+To set a remote repo, one has to tell git where the repo is located, and that's done with ``git remote add origin <github_link>``. Then, our current local branch has no remote tracking branch (which is just fancy argo for the remote branch our local branch is liked to), to set it, do ``git remote add origin git@github.com:edseldim/git_notes.git`` and ``git push --set-upstream origin <branch_name>``
+
+
+Now, all the changes can be sent to the external repo using ``git push origin``.
+
+To update our local repo with the external repo's changes, do ``git pull origin`` (**This is recommended to do before we want to modify something in the branch**)
+
+
+
 
 
