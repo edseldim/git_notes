@@ -35,13 +35,25 @@ Git uses three main areas our files can be in that serve different purposes:
 
 <img src="https://snipcademy.com/img/articles/git-fundamentals/three-stages-01.svg" alt="process example">
 
+### Undo changes
+
+It's important to know how to undo unwanted changes. To go back to a commit, one can do:
+
+* ``git reset --soft <commit SHA>`` this will go back to the commit and delete all the newer commits from that moment on.
+
+* ``git reset --mixed <commit SHA>`` this will do the same thing as the previous reset, but the commit included will be in the working directory. (changes won't be applied but the commits after the one we specified will be deleted)
+
+* ``git reset --hard`` it deletes everything.
+
+* ``git reflog`` will show all the commit history even if the commits were deleted. It should be used before ``git reset --hard <deleted commit SHA>`` to revive a deleted commit.
+
 ## Commit history and logs
 
 To have more information about the changes done, one can output various things.
 
 ``git log`` shows the commit history for the branch we are in. To make this a little bit more summarized, one can use ``git log --oneline``.
 
-``git log`` shows where the current ``HEAD`` of the different branches (or the last commit where they are) is. This is important to check the differences between the different branches.
+``git log`` shows where the current ``HEAD`` is (or the last commit of the project) is. This is important to check the differences between the different branches.
 
 Another tool git provides is ``git diff <commit A hash> <commit B hash>`` which helps compare two commits to see what differs.
 
@@ -58,4 +70,6 @@ To create a new branch and switch to it, one can do ``git checkout -b <branch_na
 To list all branches in the project, ``git branch`` will do the job.
 
 ## Remote repositories
+
+
 
